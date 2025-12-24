@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Charts</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+<h2 style="text-align:center">📈 Sample Price Trend</h2>
+<canvas id="c"></canvas>
+
+<script>
+new Chart(document.getElementById("c"), {
+    type: 'line',
+    data: {
+        labels: ['800','1200','1500','2000','2500','3000'],
+        datasets: [{
+            label: 'Price (₹ Lakhs)',
+            data: [25,35,42,60,80,105]
+        }]
+    }
+});
+</script>
+</body>
+</html>

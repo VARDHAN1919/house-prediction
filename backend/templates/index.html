@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>House Price Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</head>
+<body>
+
+<nav>
+    <a href="/">Dashboard</a>
+    <a href="/charts">Charts</a>
+    <a href="/model">Model</a>
+    <a href="/about">About</a>
+</nav>
+
+<div class="container">
+    <h1>🏠 House Price Prediction</h1>
+    <p class="subtitle">AI-powered real estate decision system</p>
+
+    <input id="area" type="number" placeholder="Area (sq ft)">
+    <input id="bedrooms" type="number" placeholder="Bedrooms">
+    <input id="bathrooms" type="number" placeholder="Bathrooms">
+    <input id="parking" type="number" placeholder="Parking">
+
+    <select id="location">
+        <option>Urban</option>
+        <option>Suburban</option>
+        <option>Rural</option>
+    </select>
+
+    <button onclick="predictPrice()">Predict Price</button>
+
+    <div id="result" class="result"></div>
+    <div id="explain" class="explain-box"></div>
+    <div id="stats" class="stats"></div>
+
+    <h3>📜 Prediction History</h3>
+    <table id="history">
+        <tr><th>Area</th><th>Price</th></tr>
+    </table>
+    <nav>
+    <a href="/dashboard">Dashboard</a>
+    <a href="/charts">Charts</a>
+    <a href="/model">Model</a>
+    <a href="/about">About</a>
+    <a href="/contact">Contact</a>
+    <a href="/logout" style="color:#ffdd57;">Logout</a>
+</nav>
+
+</div>
+
+</body>
+</html>
